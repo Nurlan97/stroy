@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+@import '../libs/owl/owl.carousel.min.css';
+@import '../libs/owl/owl.theme.default.css';
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    list-style-type: none;
+
+}
+
+a,a:hover{
+    text-decoration: none;
+    color:inherit;
+}
+
+.container{
+    padding-left: 0;
+}
+
+@import "./variables";  
+@import "./header";
+@import './home';
+@import 'discount.scss';
+@import "category.scss";
+@import "bestsellers.scss";
+@import "brands.scss";
+@import "./feedback";
+@import "_about.scss";
+@import "_footer.scss";
+@import "popup.scss";

@@ -1,0 +1,9 @@
+.brands {
+    margin: 80px 0;
+
+    &-top {
+        margin-bottom: 28px;
+
+        @include section-top;
+    }
+} 

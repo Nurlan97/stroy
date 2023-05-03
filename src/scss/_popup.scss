@@ -1,0 +1,425 @@
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+
+    .popup-close-btn {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        top: 33px;
+        right: 33px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+    }
+
+    .login-popup {
+        display: none;
+        position: absolute;
+        max-width: 375px;
+        width: 100%;
+        min-height: 490px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 36px;
+
+        &-form {
+            // width: 376px;
+            // height: 490px;
+            padding-bottom: 12px;
+
+
+            &__title {
+                text-align: center;
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+
+            }
+
+            &__label {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                @include text(normal, 500, 16px, 150%, $not_that_black);
+
+                input {
+                    max-width: 304px;
+                    width: 100%;
+                    min-height: 48px;
+                    background: #F6F6F6;
+                    /* BG/D1D1D3 */
+                    border: none;
+                    border-bottom: 1px solid #D1D1D3;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                input::placeholder {
+                    padding-top: 12px;
+                    padding-left: 16px;
+                    @include text(normal, 500, 18px, 136%, #8B8D92);
+                }
+
+                &-email {
+                    margin: 24px 0;
+                }
+
+                &-password {
+                    margin: 12px 0;
+                }
+
+
+            }
+
+            &__password-recovery {
+                @include text(normal, 500, 15px, 145%, #5D6066);
+                margin-bottom: 24px;
+            }
+
+            a {
+                display: block;
+            }
+
+            &__sign-in-btn {
+                width: 304px;
+                height: 48px;
+
+                /* Main/FDF074 */
+
+                background: #FCEC41;
+                padding: 12px 125.5px;
+                @include text(normal, 500, 18px, 136%, $black);
+
+            }
+
+
+
+
+        }
+
+        &-reg {
+            width: 304px;
+            height: 48px;
+            @include text(normal, 500, 18px, 136%, $black);
+            background: #FFFFFF;
+            border: 1px solid #D1D1D3;
+        }
+    }
+
+    .reg-popup {
+        position: absolute;
+        max-width: 572px;
+        width: 100%;
+        min-height: 396px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+
+        &-form {
+            padding: 36px;
+
+            &__title {
+                text-align: center;
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+            }
+
+            &__label {
+                margin: 24px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                @include text(normal, 500, 16px, 150%, $not_that_black);
+
+                input {
+                    padding: 12px 16px;
+                    border: none;
+                    background: #F6F6F6;
+                    border-bottom: 1px solid #D1D1D3;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                input::placeholder {
+                    @include text(normal, 500, 18px, 136%, #8B8D92);
+                }
+
+                &-signUp-btn {
+                    background: #FCEC41;
+                    padding: 12px 158.5px;
+                    width: 500px;
+                    height: 48px;
+                    border: none;
+
+                    @include text(normal, 500, 18px, 136%, $black);
+                }
+
+            }
+
+        }
+
+    }
+
+    .city-popup {
+        position: absolute;
+        max-width: 572px;
+        width: 100%;
+        min-height: 396px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // display: none;
+
+        &-form {
+            padding: 36px;
+
+            &__title {
+                text-align: center;
+
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+            }
+
+            &__input-container {
+                position: relative;
+                width: 500px;
+                height: 48px;
+                padding: 12px 16px;
+                background: #F6F6F6;
+                /* BG/D1D1D3 */
+
+                border-bottom: 1px solid #D1D1D3;
+                margin: 24px 0;
+
+                input {
+                    position: absolute;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                input::placeholder {
+                    @include text(normal, 500, 18px, 136%, #8B8D92);
+                }
+
+                img {
+                    position: absolute;
+                    right: 16px;
+                }
+            }
+
+            &__city-name-block {
+
+                gap: 4px;
+
+                img {
+
+                    text-align: center;
+                    margin-top: -16px;
+                }
+            }
+
+
+
+            &__city-name {
+                @include text(normal, 500, 16px, 150%, $not_that_black);
+
+
+
+
+
+
+            }
+
+
+
+        }
+
+    }
+
+    .cart-alert {
+        position: absolute;
+        max-width: 840px;
+        width: 100%;
+        min-height: 346px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-form {
+            padding: 36px;
+
+            &__title {
+                max-width: 554px;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 24px;
+
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+
+            }
+
+            &__right {
+                padding: 16px 16px 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+            }
+
+            &__text {
+                width: 100%;
+                @include text(normal, 500, 16px, 150%, $not_that_black);
+            }
+
+            &__price {
+                @include text(normal, 700, 20px, 140%, $black);
+            }
+
+            &__items-number {
+                @include text(normal, 500, 16px, 150%, $not_that_black);
+            }
+
+            &__btns {
+                display: flex;
+                gap: 24px;
+            }
+
+            &__cart-btn {
+                width: 213px;
+                height: 48px;
+                background: #FCEC41;
+                padding: 12px 25px;
+                text-align: center;
+                @include text(normal, 500, 18px, 136%, $black);
+            }
+
+            &__shopping-btn {
+                height: 48px;
+                background: #FFFFFF;
+                border: 1px solid #D1D1D3;
+                padding: 12px 24px;
+                @include text(normal, 500, 18px, 136%, $black);
+            }
+        }
+    }
+
+    .error-popup {
+        position: absolute;
+        max-width: 572px;
+        width: 100%;
+        min-height: 248px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-form {
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__title {
+                text-align: center;
+                margin-bottom: 12px;
+
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+            }
+
+            &__text {
+                text-align: center;
+                margin-bottom: 24px;
+
+                @include text(normal, 500, 18px, 136%, #454950);
+            }
+
+            &__btn {
+                width: 213px;
+                height: 48px;
+                padding: 12px 16px;
+
+                /* Main/FDF074 */
+
+                background: #FCEC41;
+                @include text(normal, 500, 18px, 136%, $black);
+            }
+        }
+    }
+
+    .order-alert {
+        position: absolute;
+        max-width: 572px;
+        width: 100%;
+        min-height: 224px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-form {
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            &__title {
+                margin-bottom: 12px;
+                @include text(normal, 600, 34px, 130%, $not_that_black);
+
+            }
+
+            &__text {
+                margin-bottom: 24px;
+                @include text(normal, 500, 18px, 136%, #454950);
+            }
+
+            &__btn {
+                padding: 12px 16px;
+                width: 213px;
+                height: 48px;
+                background: #FCEC41;
+                @include text(normal, 500, 18px, 136%, #171B24);
+            }
+        }
+
+
+    }
+}

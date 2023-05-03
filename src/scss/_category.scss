@@ -1,0 +1,21 @@
+.category {
+    margin: 80px 0;
+
+    &-top {
+        margin-bottom: 28px;
+
+        @include section-top;
+    }
+
+    &-card{
+        text-align: center;
+
+        &__pic{
+            margin: 16px 0 28px;
+
+            &_bottom{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

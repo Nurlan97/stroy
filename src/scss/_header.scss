@@ -1,0 +1,117 @@
+.header {
+
+    &-top {
+        padding: 11px 0;
+
+
+        &__icon-block {
+            position: relative;
+            cursor: pointer;
+
+            img {
+                position: absolute;
+                top: 1px;
+            }
+
+            p {
+                position: absolute;
+                left: 25px;
+                @include text(normal, 500, 15px, 145%, $grey);
+            }
+        }
+
+        &__menu-block {
+            width: 460px;
+            @include text(normal, 500, 15px, 145%, $grey);
+        }
+
+        &__menu-items {
+            gap: 24px;
+        }
+    }
+
+    &-middle {
+        padding: 16px 0;
+        border-bottom: 1px solid #E8E9EA;
+
+        &__menu {
+            width: 866px;
+            gap: 16px;
+
+            &__btn {
+                padding: 12px 22px;
+                border: none;
+                background: $yellow;
+                gap: 8px;
+                @include text(normal, 500, 18px, 136%, #171B24);
+
+            }
+
+            &__form {
+                width: 444px;
+                height: 48px;
+                position: relative;
+                // padding: 12px 16px;
+
+                &-input {
+                    width: 100%;
+                    border: none;
+                    background: #F6F6F6;
+                    /* BG/D1D1D3 */
+
+                    border-bottom: 1px solid #D1D1D3;
+                    padding: 12px 16px;
+
+                    &-pic {
+                        position: absolute;
+
+                        right: 0;
+                        height: 48px;
+                        border: none;
+                        background: none;
+                        padding: 12px 16px;
+                        cursor: pointer;
+                    }
+                }
+
+                &-input:focus {
+                    outline: none;
+
+                    // border:none;
+                }
+
+
+            }
+
+            &__user-action {
+
+                &-items{
+                    width: 82px;
+                    text-align: center;
+                    @include text(normal,500,15px,145%,$dark-grey);
+                    cursor: pointer;
+
+                    &-pic{
+
+                    }
+                }
+            }
+        }
+    }
+
+    &-bottom{
+
+        &__nav{
+            display:flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #E8E9EA;
+            padding: 10px 0;
+
+
+        }
+
+        &__links{
+            @include text(normal,500,16px,150%,$dark-grey);
+        }
+    }
+}

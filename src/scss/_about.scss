@@ -1,0 +1,17 @@
+.about{
+    background: url("../images/about/about-background.png");
+    margin: 40px;
+    padding: 88px 200px;
+
+    &-container{
+       width: 670px;
+
+       &__title{
+        @include text(normal, 600,34px,130%, $not-that-black);
+       }
+
+       &__text{
+        @include text(normal,400, 16px,150%, $not-that-black);
+       }
+    }
+}

@@ -1,0 +1,33 @@
+@mixin text($style,$weight,$size,$height,$color){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height:$height;
+    color:$color;
+}
+
+@mixin section-top{
+    &__title {
+        @include text(normal, 600, 34px, 130%, $not-that-black);
+    }
+
+    &__btn {
+        gap: 17px;
+        white-space: nowrap;
+        align-items: center;
+        background: #FFFFFF;
+        /* BG/D1D1D3 */
+
+        border: 1px solid #D1D1D3;
+        padding: 12px 24px;
+
+        @include text(normal, 500, 18px, 136%, $black);
+    }
+}
+
+$grey:#5D6066;
+$yellow: #FCEC41;
+$dark-grey: #454950;
+$black:#171B24;
+$not-that-black:#2F323A;
+
