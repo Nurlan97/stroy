@@ -990,4 +990,32 @@ a, a:hover {
   font-size: 18px;
   line-height: 136%;
   color: #171B24;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.accordion_info {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion.active .accordion__info {
+  max-height: max-content;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
 }/*# sourceMappingURL=style.css.map */
