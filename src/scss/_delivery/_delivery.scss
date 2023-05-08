@@ -10,7 +10,7 @@
     font-size: 15px;
     transition: 0.4s;
 
-    &_info{
+    .accordion__info{
         padding: 0 18px;
         background-color: white;
         max-height: 0;
@@ -32,5 +32,5 @@
     background-color: #ccc;
 }
 
-.panel {
-}
+// .panel {
+// }

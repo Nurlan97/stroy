@@ -1,6 +1,6 @@
 // $(documentt).ready(function(){
 //     $('.accordion').click(function(){
-//         $('accordion').addClass('active')
+//         $(this).toggleClass('active')
 //     })
 // })
 
