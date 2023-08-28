@@ -379,12 +379,12 @@ a, a:hover {
   padding: 12px 80px;
   border: none;
   display: inline-block;
+  width: 247px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 136%;
   color: #171B24;
-  width: 247px;
 }
 
 .brands {
